@@ -40,4 +40,3 @@ while f.readline():
     if user in r:
         c+=1
 print("Login Sucessfull") if c==2 else print("Username or Password wrong")
-print("Login Sucessfull")
