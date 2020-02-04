@@ -26,17 +26,15 @@ p=pwd(p)
 f=open("login.txt","a")
 f.write(n+'\t'+p+'\n')
 print("You're Registered")
-f.close()
 f=open("login.txt","r")
 user=input("Enter your username : ")
-c=0
-while f.readline():
-    r=f.readline()
-    if user in r:
-        c+=1        
-pas=input("Enter your Password : ")
+c,r=0,0
 while f.readline():
     r=f.readline()
     if user in r:
         c+=1
+pas=input("Enter your Password : ")
+if pas in r:
+    c+=1
 print("Login Sucessfull") if c==2 else print("Username or Password wrong")
+f.close()
